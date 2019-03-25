@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .magnet {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        background-color: yellow;
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+        min-width: 100px;
+        min-height: 100px;
+        padding: 35px;
+        box-sizing: border-box;
+        font-family: "Indie Flower", cursive;
+      }
+      .area {
+        width: 500px;
+        height: 500px;
+      }
+      .mce-tinymce {
+        z-index: 1000;
+        position: absolute;
+        top: 20%;
+        left: 40%;
+      }
+      .lock {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+        visibility: hidden;
+        z-index: 500;
+      }
+      .dodaj {
+        width: 40px;
+        z-index: 100;
+        position: fixed;
+        user-select: none;
+      }
+
+      .dodaj:hover {
+        cursor: pointer;
+      }
+
+      .x {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        user-select: none;
+        background-image: url("x.png");
+        background-size: 20px 20px;
+      }
+
+      .resize {
+        transform: scaleY(-1);
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        user-select: none;
+        background-image: url("resize.png");
+        background-size: 25px 25px;
+      }
+      .closebutton {
+        font-weight: bold !important;
+        font-size: 1.5em !important;
+        color: red !important;
+        border: 2px solid red !important;
+        background-color: black;
+      }
+      .closebutton:hover {
+        cursor: pointer;
+      }
+      .edit {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        user-select: none;
+        background-image: url("edit.png");
+        background-size: 25px 25px;
+      }
+
+      .aktywna {
+        background: orange;
+      }
+    </style>
+    <script src="tinymce/tinymce.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <img src="add.png" onclick="fridge.add();" alt="dodaj" class="dodaj" />
+    <div class="lock"></div>
+  </body>
+</html>
